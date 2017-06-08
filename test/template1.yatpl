@@ -1,0 +1,10 @@
+output = FancyMarkup.new.document do
+  body do
+    div id: "container" do
+      ul class: "pretty" do
+        li "Item 1", class: :active
+        li "Item 2"
+      end
+    end
+  end
+end
