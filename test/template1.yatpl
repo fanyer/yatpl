@@ -1,3 +1,8 @@
+$:.unshift(File.dirname(__FILE__) + '/../src/')
+
+require "wrapper"
+require "pp"
+
 output = FancyMarkup.new.document do
   body do
     div id: "container" do
@@ -8,3 +13,5 @@ output = FancyMarkup.new.document do
     end
   end
 end
+
+p output
