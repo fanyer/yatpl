@@ -1,0 +1,25 @@
+$:.unshift(File.dirname(__FILE__) + '/../src/')
+
+require "wrapper"
+require "pp"
+
+output = FancyMarkup.new.document do
+  body do
+    div id: "container1" do
+        div id: "container2" do
+          ul class: "pretty" do
+            li "Item 1", class: :active
+            li "Item 2"
+          end
+        end
+        div id: "container3" do
+          ul class: "pretty" do
+            li "Item 1", class: :active
+            li "Item 2"
+          end
+        end
+    end
+  end
+end
+
+p output
